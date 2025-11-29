@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <h1 style="text-align: center; color: blue;">Mini Fleet Management App</h1>
+    <hr>
+    <div>
+        <label><strong>Email :</strong></label>
+        <input type="email" id="email" required placeholder="Enter Email"><br><br>
+        <label><strong>Password :</strong></label>
+        <input type="password" id="password" required placeholder="Enter Password"><br><br>
+        <button onclick="login()">Login</button>
+    </div>
+</body>
+<script>
+    function login(){
+        const email = document.getElementById("email").value;
+        const pass = document.getElementById("password").value;
+
+        if(email === "admin@gmail.com" && pass === "admin1234"){
+            window.location.href= "admin.html";
+            alert("Login success")
+        }else{
+            alert("Invalid email or password")
+        }
+    }
+</script>
+</html>

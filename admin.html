@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="color: blue;">Fleet Admin Dashboard</h1>
+
+    <div class="navbar">
+        <select id="catFilter" onchange="applyFilters()">
+            <option value="All">All</option>
+            <option value="Auto">Auto</option>
+            <option value="Car">Car</option>
+            <option value="Truck">Truck</option>
+            <option value="Bus">Bus</option>
+        </select>
+
+        <select  id="availFilter" onchange="applyFilters()">
+            <option value="All">All</option>
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+        </select>
+
+        <button onclick="clearFilter()">Clear Filter</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Add Fleet</h2>
+            <input id="reg" type="text" placeholder="Reg No of vehicle"> <br><br>
+            <select id="category">
+                <option value="Auto">Auto</option>
+                <option value="Car">Car</option>
+                <option value="Truck">Truck</option>
+                <option value="Bus">Bus</option>
+            </select><br><br>
+
+            <input type="text" id="driver" placeholder="Driver Name"><br><br>
+            <select id="isAvailable">
+                <option value="Available">Available</option>
+                <option value="Unavailable">Unavailable</option>
+            </select><br><br>
+
+            <button onclick="addFleet(event)">Add Fleet</button>
+        </div>
+
+        <div class="main" 
+        id="fleetContainer">
+        </div>
+    </div>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
